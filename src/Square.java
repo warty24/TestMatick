@@ -46,7 +46,7 @@ public class Square extends Figure {
 
     public Square() {
         a = new Point2D(getRandAxis(), getRandAxis());
-        side = (int) Math.random() * (Main.FIELD_SIZE / 4);
+        side = (int) (Math.random() * (Main.FIELD_SIZE / 4));
         if ((a.getX() + side < Main.FIELD_SIZE) & (a.getY() + side <Main.FIELD_SIZE)) {
             Point2D b = new Point2D(a.getX() + side , a.getY());
             Point2D c = new Point2D( a.getX(), a.getY() + side);

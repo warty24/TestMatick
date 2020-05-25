@@ -1,6 +1,6 @@
 // move color to Fig constr
 
-public abstract class Figure {
+public class Figure {
     final int COLORS_QUANTITY = 6;
     double square;
     Color color;
@@ -11,7 +11,7 @@ public abstract class Figure {
         return (int) ((Math.random()*Main.FIELD_SIZE * 2) - Main.FIELD_SIZE);
     }
     String randColor (){
-        int t =(int) Math.random()*COLORS_QUANTITY;
+        int t =(int) (Math.random()*COLORS_QUANTITY);
         switch (t){
             case 0:
                 return "red";
