@@ -41,10 +41,12 @@ public class Square extends Figure {
      *
      *
      */
-    Point2D a,b,c,d;
-    int side;
+    private Point2D a;
+    private Point2D c;
+    private Point2D d;
+    private int side;
 
-    public Square() {
+    Square() {
         a = new Point2D(getRandAxis(), getRandAxis());
         side = (int) (Math.random() * (Main.FIELD_SIZE / 4));
         if ((a.getX() + side < Main.FIELD_SIZE) & (a.getY() + side <Main.FIELD_SIZE)) {
@@ -54,7 +56,7 @@ public class Square extends Figure {
         }
         else
         {
-            b = new Point2D(a.getX() - side , a.getY());
+            Point2D b = new Point2D(a.getX() - side, a.getY());
             c = new Point2D( a.getX(), a.getY() - side);
             d = new Point2D( a.getX() - side, a.getY() - side);
         }
@@ -65,4 +67,8 @@ public class Square extends Figure {
     public int getSide(){
         return side;
     }
+    String uniqueMethod(){
+        return "Side = " + side + " parrots";
+    }
+
 }

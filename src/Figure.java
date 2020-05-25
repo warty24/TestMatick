@@ -1,7 +1,5 @@
-// move color to Fig constr
-
-public class Figure {
-    final int COLORS_QUANTITY = 6;
+class Figure {
+    private final int COLORS_QUANTITY = 6;
     double square;
     Color color;
     /*
@@ -31,4 +29,8 @@ public class Figure {
                 return "red";
         }
     }
+    String uniqueMethod(){
+        return "No figure";
+    }
+
 }

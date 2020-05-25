@@ -1,9 +1,9 @@
 import javafx.geometry.Point2D;
 
-public class Triangle extends Figure {
-    Point2D a,b,c;
-    double height;
-    public Triangle(){
+class Triangle extends Figure {
+    private Point2D a,b,c;
+    private double height;
+    Triangle(){
         a = new Point2D(getRandAxis(), getRandAxis());
         b = new Point2D(getRandAxis(), getRandAxis());
         c = new Point2D(getRandAxis(), getRandAxis());
@@ -14,5 +14,7 @@ public class Triangle extends Figure {
     double getHeight() {
         return height;
     }
-
+    String uniqueMethod(){
+        return "Height = " + (int)height + " parrots";
+    }
 }
