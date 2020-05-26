@@ -1,3 +1,4 @@
+// fix color
 // add interface Drawable
 // edit/delete unused overloaded methods/constructors
 // add GUI
