@@ -1,4 +1,3 @@
-// fix color
 // add interface Drawable
 // edit/delete unused overloaded methods/constructors
 // add GUI
@@ -14,7 +13,7 @@ public class Main {
     private final static int MAX_FIGURES_QUANTITY = 40;
 
     private static List<Figure> Figures = new ArrayList<>();
-    static void createRandFig() {
+    private static void createRandFig() {
         int t = (int) (Math.random() * 4);
         switch (t) {
             case 0:

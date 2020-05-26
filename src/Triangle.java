@@ -16,6 +16,7 @@ class Triangle extends Figure {
         height =(int)(Math.random() * figSize -2) +2;
         side = height;
         square = (side * height)/2;
+        color = new Color(randColor());
     }
     double getHeight() {
         return height;

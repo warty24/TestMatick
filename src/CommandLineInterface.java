@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CommandLineInterface {
-    Scanner scan = new Scanner(System.in);
-    int figSize, figQantity, temp, selectedFig, val1, val2;
+class CommandLineInterface {
+    private Scanner scan = new Scanner(System.in);
+    private int figSize, figQantity, temp, selectedFig, val1, val2;
     static List<Figure> Figures = new ArrayList<>();
 
     CommandLineInterface() {
@@ -28,7 +28,7 @@ public class CommandLineInterface {
             Main.createRandFig(figSize);
         }
         for(Figure fig:Figures){
-            System.out.println(Figures.indexOf(fig) +". "+ fig.getClass() +"\t square = " + (int)fig.square + " parrots^2 "+ "  \t" + fig.uniqueMethod() );//"   \tcolor = " + fig.color.name);
+            System.out.println(Figures.indexOf(fig) +". "+ fig.getClass() +"\t square = " + (int)fig.square + " parrots^2 "+ "  \t" + fig.uniqueMethod() + "   \tcolor = " + fig.color.name);
         }
         temp = -1;
         selectedFig = 0;
@@ -37,7 +37,7 @@ public class CommandLineInterface {
             System.out.println("\nselected figure is "+ selectedFig);
             System.out.println("Choose action\n");
             System.out.println("1. Print all figures list");
-            System.out.println("2. Print few figures list"); //!finished
+            System.out.println("2. Print few figures list");
             System.out.println("3. Select the figure");
             System.out.println("4. Print selected figure");
             System.out.println();
@@ -51,8 +51,8 @@ public class CommandLineInterface {
                 case 1:
                     for(Figure fig:Figures){
                     System.out.println(Figures.indexOf(fig) +". "+ fig.getClass() +"\t square = " + (int)fig.square + " parrots^2 "+ "  \t" + fig.uniqueMethod() );//"   \tcolor = " + fig.color.name);
-                        break;
                 }
+                    break;
                 case 2:
                     System.out.println("Enter start index");
                     val1 = scan.nextInt();
@@ -70,6 +70,8 @@ public class CommandLineInterface {
                     break;
                 case 4:
                     Figures.get(selectedFig).printFigure();
+                case 0:
+                    temp = 0;
             }
         }
         System.out.println("\nCreated " + Figures.size() +" figures");
