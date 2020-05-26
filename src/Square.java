@@ -63,12 +63,25 @@ public class Square extends Figure {
         color = new Color(randColor());
         square = side*side;
     }
+    Square(int figSize) {
+        side = (int) (Math.random() * figSize - 1) +1;
+        color = new Color(randColor());
+        square = side*side;
+    }
 
     public int getSide(){
         return side;
     }
     String uniqueMethod(){
         return "Side = " + side + " parrots";
+    }
+    void printFigure() {
+        for(int i = 0; i < side; i++){
+            for(int j = 0; j < side; j++){
+                System.out.print('*');
+            }
+            System.out.println();
+        }
     }
 
 }

@@ -32,5 +32,6 @@ class Figure {
     String uniqueMethod(){
         return "No figure";
     }
+    void printFigure(){}
 
 }
